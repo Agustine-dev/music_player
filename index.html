@@ -1,14 +1,57 @@
-<!doctype html>
-  <html>
-  <head>
-    <title>Gradient | Music Player</title>
-    <link rel="stylesheet" href="style.css"/>
-  </head>
-  <body>
-    <h1>
-  Hey there 
-  </h1>
-    <script src="script.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Music Player</title>
+</head>
+<body>
+    <div class="player">
+        <!-- Details Section-->
+        <div class="details">
+            <form method="post" class="d-none">
+                <input type="file" id="get-files" multiple accept="audio/*">
+                <input type="button" class="addToPlay" onclick="addToPlay()"  value="Add to Playlist">
+            </form>
+            <div class="info">
+                <p class="now-playing"></p>
+                <input type="button" value="shuffle" class="shuffleBtn">
+                <input type="button" value="Restart" class="shuffledBtn d-none">
+            </div>
+                <div class="track-art"></div>
+                <div class="track-name"></div>
+                <div class="track-artist"></div>
+            <!-- Track Buttons Section-->
+            <div class="buttons">
+                <div class="prev-track" onclick="prevTrack()">
+                    Prev
+                </div>
+                <div class="playpause" onclick="playPauseTrack()">
+                    Play
+                </div>
+                <div class="next-track" onclick="nextTrack()">
+                    Next
+                </div>
+            </div>
 
-  </html>
+            <!-- Seek Slider-->
+
+            <div class="slider-container">
+                <div class="current-time">00:00</div>
+                <input type="range" class="seek_slider" min="1" max="100" value="0" onchange="seekTo()">
+                <div class="total-duration">00:00</div>
+            </div>
+
+            <!-- Volume Slider -->
+            <div class="slider-container">
+                <strong>-</strong>
+                <input type="range" min="1" max="100" value="99" class="volume-slider" onchange="setVolume()">
+                <strong>+</strong>
+            </div>         
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

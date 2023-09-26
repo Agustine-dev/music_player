@@ -1,0 +1,170 @@
+body {
+    background-color: lightgreen;
+    background: no-repeat;
+    transition: background-color 2s;
+    height: 100vh;
+}
+
+.player {
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;
+    border: 2px solid darkolivegreen;
+    padding: 12px;
+    box-shadow: 0 0 0 9px olive;
+    border-radius: 33px;
+}
+
+.track-art {
+    margin: 25px;
+    height: 250px;
+    width: 250px;
+    background-image: url("../hanson.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 15%;
+}
+
+.now-playing {
+    font-size: 1rem;
+
+}
+.track-name {
+    font-size: 3rem;
+}
+
+.track-artist {
+    font-size: 1.5rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.playpause,
+.prev-track,
+.next-track {
+    padding: 12px;
+    margin: 12px 33px;
+    opacity: 0.8;
+    transition: opacity .3s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.playpause:hover,
+.prev-track:hover,
+.next-track:hover {
+    opacity: 1.0;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 12px;
+    box-shadow: 0 0 0 10px darkolivegreen;
+    color: azure;
+    transition: all .4s;
+}
+
+
+.slider-container {
+    width: 75%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seek-slider, .volume-slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: black;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+
+.seek-slider::-webkit-slider-thumb, .volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    border-radius:50%;
+}
+
+
+.seek-slider:hover, .volume-slider:hover {
+    opacity: 1.0;
+}
+
+.seek-slider {
+    width: 60%;
+}
+
+.volume-slider {
+    width: 30%;
+}
+
+.current-time,
+.total-duration {
+    padding: 10px;
+    font-family: fantasy;
+}
+
+.shuffleBtn {
+    background: inherit;
+    border-radius: 25px;
+    margin: 0 12px;
+    color: darkslategrey;
+    font-weight: 800;
+    font-size: medium;
+    opacity: 0.7;
+}
+
+.shuffledBtn {
+    background: inherit;
+    border-radius: 25px;
+    margin: 0 12px;
+    font-weight: 800;
+    font-size: medium;
+    opacity: 0.7;
+}
+
+.shuffleBtn:hover {
+    opacity: 1.0;
+    cursor: pointer;
+}
+
+.d-none {
+    display: none;
+    visibility: hidden;
+}
+
+
+
+strong {
+    font-weight: 900;
+    margin: 0 33px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
